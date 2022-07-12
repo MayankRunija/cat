@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAT</title>
+    <style>
+      body{
+        background-color: pink;
+      }
+      .face {
+        background-color: black;
+        height: 350px;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 50%;
+        margin-left: 500px;
+        z-index: 9;
+      }
+      #face {
+        background-color: black;
+        height: 350px;
+        width: 500px;
+        margin-top: -350px;
+        border-radius: 50%;
+        margin-left: 500px;
+        position: absolute;
+        z-index: 9;
+      }
+
+      /* ****************Eye right*************************  */
+
+      .eyeyellow {
+        background-color: yellow;
+        height: 150px;
+        width: 120px;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 580px;
+        margin-top: -280px;
+        z-index: 9;
+      }
+      .eyeblack {
+        background-color: black;
+        height: 150px;
+        width: 80px;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 600px;
+        margin-top: -280px;
+        z-index: 9;
+      }
+      .eyewhite {
+        background-color: white;
+        height: 40px;
+        width: 20px;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 653px;
+        margin-top: -255px;
+        transform: rotate(-10deg);
+        z-index: 9;
+      }
+      /* ****************Eye Left*************************  */
+      #eyeyellow {
+        margin-left: 790px;
+      }
+      #eyeblack {
+        margin-left: 810px;
+      }
+      #eyewhite {
+        margin-left: 863px;
+      }
+      /* ******************Nose********************** */
+      .nose {
+        color: gray;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 30px solid;
+        height: 0px;
+        width: 2px;
+        border-radius: 14px;
+        position: absolute;
+        margin-left: 730px;
+        margin-top: -205px;
+        z-index: 9;
+      }
+      #nose1 {
+        background-color: gray;
+        position: absolute;
+        height: 10px;
+        width: 2.6px;
+        margin-left: 745px;
+        margin-top: -177px;
+        z-index: 9;
+      }
+      #nose2 {
+        background-color: gray;
+        position: absolute;
+        transform: rotate(30deg);
+        height: 50px;
+        width: 1.5px;
+        margin-left: 734px;
+        margin-top: -176px;
+        z-index: 9;
+      }
+      #nose3 {
+        background-color: gray;
+        position: absolute;
+        transform: rotate(-30deg);
+        height: 50px;
+        width: 1.5px;
+        margin-left: 757px;
+        margin-top: -175px;
+        z-index: 9;
+      }
+      .body {
+        border-bottom: 300px solid rgb(0, 0, 0);
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        height: 0;
+        width: 225px;
+        margin-left: 570px;
+        margin-top: -100px;
+      }
+      .ear {
+        margin: 0 auto;
+        width: 300px;
+        height: 300px;
+        background-color: black;
+        border-radius: 100% 0px;
+        transform: rotate(-70deg);
+        margin-top: -590px;
+        margin-left: 450px;
+      }
+      #ear {
+        margin-left: 740px;
+        margin-top: -310px;
+        transform: rotate(-20deg);
+        position: absolute;
+      }
+      .eargray {
+        width: 150px;
+        height: 150px;
+        background-color: gray;
+        border-radius: 100% 0%;
+        transform: rotate(-70deg);
+        margin-top: -260px;
+        margin-left: 510px;
+        position: absolute;
+      }
+      #eargray {
+        margin-left: 830px;
+        margin-top: -260px;
+        transform: rotate(-20deg);
+        position: absolute;
+      }
+      #star {
+        position: relative;
+        display: block;
+        color: yellow;
+        width: 0px;
+        height: 0px;
+        border-right: 50px solid transparent;
+        border-bottom: 35px solid yellow;
+        border-left: 50px solid transparent;
+        transform: rotate(35deg);
+        left: 700px;
+        top: 78px;
+      }
+      #star1 {
+        position: absolute;
+        display: block;
+        color: yellow;
+        width: 0px;
+        height: 0px;
+        border-right: 50px solid transparent;
+        border-bottom: 35px solid yellow;
+        border-left: 50px solid transparent;
+        transform: rotate(-35deg);
+        top: 608px;
+        left: 698.5px;
+      }
+      #star2 {
+        border-bottom: 40px solid yellow;
+        border-left: 17px solid transparent;
+        border-right: 17px solid transparent;
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: 573px;
+        left: 738px;
+        display: block;
+      }
+      .belt {
+        width: 335px;
+        height: 100px;
+        border: solid 5px yellow;
+        border-color: yellow transparent transparent transparent;
+        border-radius: 50%/100px 100px 0 0;
+        margin-left: 580px;
+        margin-top: 10px;
+        transform: scaleY(-1);
+      }
+      .belt1 {
+        background-color: yellow;
+        position: absolute;
+        height: 50px;
+        width: 5px;
+        margin-left: 744.5px;
+        margin-top: -1px;
+        z-index: 9;
+      }
+      .M1 {
+        width: 335px;
+        height: 100px;
+        border: solid 5px black;
+        border-color: black transparent transparent transparent;
+        border-radius: 40%/100px 100px 0 0;
+        margin-left: 340px;
+        margin-top: -300px;
+        transform: scaleY(-1);
+      }
+      .M2 {
+        width: 150px;
+        height: 100px;
+        border: solid 5px black;
+        border-color: black transparent transparent transparent;
+        margin-left: 440px;
+        margin-top: 20px;
+        transform: rotate(-25deg);
+      }
+      .M3 {
+        width: 150px;
+        height: 100px;
+        border: solid 5px black;
+        border-color: black transparent transparent transparent;
+        margin-left: 390px;
+        margin-top: -170px;
+        transform: rotate(25deg);
+      }
+      #M1 {
+        margin-left: 820px;
+        margin-top: -170px;
+      }
+      #M2 {
+        margin-left: 940px;
+        margin-top: -30px;
+        transform: rotate(-25deg);
+      }
+      #M3 {
+        margin-left: 900px;
+        margin-top: -60px;
+        transform: rotate(25deg);
+      }
+
+      @media screen and (max-width: 600px) {
+        .face {
+          background-color: black;
+          height: 160px;
+          width: 230px;
+          margin-top: 130px;
+          border-radius: 50%;
+          margin-left: 30px;
+        }
+        #face {
+          background-color: black;
+          height: 160px;
+          width: 230px;
+          margin-top: -160px;
+          border-radius: 50%;
+          margin-left: 30px;
+          position: absolute;
+          z-index: 9;
+        }
+        /* ****************Eye Left*************************  */
+        .eyeyellow {
+          background-color: yellow;
+          height: 50px;
+          width: 40px;
+          border-radius: 50%;
+          position: absolute;
+          margin-left: 70px;
+          margin-top: -130px;
+        }
+        .eyeblack {
+          background-color: black;
+          height: 50px;
+          width: 25px;
+          border-radius: 50%;
+          position: absolute;
+          margin-left: 78px;
+          margin-top: -130px;
+        }
+
+        .eyewhite {
+          background-color: white;
+          height: 10px;
+          width: 5px;
+          border-radius: 50%;
+          position: absolute;
+          margin-left: 95px;
+          margin-top: -120px;
+          transform: rotate(-10deg);
+        }
+        /*  ****************Eye Right*************************  */
+
+        #eyeyellow {
+          margin-left: 180px;
+        }
+        #eyeblack {
+          margin-left: 188px;
+        }
+        #eyewhite {
+          margin-left: 205px;
+        }
+        /* ******************Nose********************** */
+        .nose {
+          color: gray;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-top: 30px solid;
+          height: 0px;
+          width: 0px;
+          border-radius: 14px;
+          position: absolute;
+          margin-left: 130px;
+          margin-top: -115px;
+          z-index: 9;
+        }
+        #nose1 {
+          background-color: gray;
+          position: absolute;
+          height: 6px;
+          width: 2px;
+          margin-left: 144px;
+          margin-top: -87px;
+          z-index: 9;
+        }
+        #nose2 {
+          background-color: gray;
+          position: absolute;
+          transform: rotate(30deg);
+          height: 20px;
+          width: 1.5px;
+          margin-left: 139px;
+          margin-top: -85px;
+          z-index: 9;
+        }
+        #nose3 {
+          background-color: gray;
+          position: absolute;
+          transform: rotate(-30deg);
+          height: 20px;
+          width: 1.5px;
+          margin-left: 149px;
+          margin-top: -85px;
+          z-index: 9;
+        }
+        /* ******************Body********************** */
+        .body {
+          border-bottom: 160px solid rgb(0, 0, 0);
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          height: 0;
+          width: 130px;
+          margin-left: 30px;
+          margin-top: -35px;
+        }
+        /* ******************Ear left********************** */
+        .ear {
+          margin: 0 auto;
+          width: 170px;
+          height: 170px;
+          background-color: black;
+          border-radius: 100% 0px;
+          transform: rotate(-70deg);
+          margin-top: -300px;
+          margin-left: 20px;
+        }
+        .eargray {
+          width: 80px;
+          height: 80px;
+          background-color: gray;
+          border-radius: 100% 0%;
+          transform: rotate(-70deg);
+          margin-top: -160px;
+          margin-left: 47px;
+          position: absolute;
+        }
+        /* ******************Ear Right********************** */
+        #ear {
+          margin-left: 100px;
+          margin-top: -170px;
+          transform: rotate(-20deg);
+        }
+        #eargray {
+          margin-left: 162px;
+          margin-top: -160px;
+          transform: rotate(-20deg);
+          position: absolute;
+        }
+        /* ******************Collar********************** */
+
+        #star {
+        position: relative;
+        display: block;
+        color: yellow;
+        width: 0px;
+        height: 0px;
+        border-right: 30px solid transparent;
+        border-bottom: 20px solid yellow;
+        border-left: 30px solid transparent;
+        transform: rotate(35deg);
+        left: 115px;
+        top: 37px;
+      }
+      #star1 {
+        position: absolute;
+        display: block;
+        color: yellow;
+        width: 0px;
+        height: 0px;
+        border-right: 30px solid transparent;
+        border-bottom: 19.5px solid yellow;
+        border-left: 30px solid transparent;
+        transform: rotate(-35deg);
+        top: 348px;
+        left: 116.1px;
+      }
+      #star2 {
+        border-bottom: 25px solid yellow;
+        border-left: 9.5px solid transparent;
+        border-right: 9.5px solid transparent;
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: 326px;
+        left: 8.77rem;
+        display: block;
+      }
+      .belt {
+        width: 201px;
+        height: 100px;
+        border: solid 3px yellow;
+        border-color: yellow transparent transparent transparent;
+        border-radius: 50%/100px 100px 0 0;
+        margin-left: 41.5px;
+        margin-top: -80px;
+        transform: scaleY(-1);
+      }
+      .belt1 {
+        background-color: yellow;
+        position: absolute;
+        height: 20px;
+        width: 3px;
+        margin-left: 140px;
+        margin-top: -1px;
+        z-index: 9;
+      }
+      /* ******************Mustache Left********************** */
+      .M1 {
+        width: 235px;
+        height: 100px;
+        border: solid 3px black;
+        border-color: black transparent transparent transparent;
+        border-radius: 20%/20px 100px 0 0;
+        margin-left: -15px;
+        margin-top: -210px;
+        transform: scaleY(-1);
+      }
+      .M2 {
+        width: 150px;
+        height: 100px;
+        border: solid 3px black;
+        border-color: black transparent transparent transparent;
+        margin-left: 20px;
+        margin-top: -20px;
+        transform: rotate(-25deg);
+      }
+      .M3 {
+        width: 150px;
+        height: 100px;
+        border: solid 3px black;
+        border-color: black transparent transparent transparent;
+        margin-left: -25px;
+        margin-top: -85px;
+        transform: rotate(25deg);
+      }
+      /* ******************Mustache Right********************** */
+      #M1 {
+        margin-left: 65px;
+        margin-top: -214px;
+        transform: scaleX(-1);
+        transform: rotate(-180deg);
+      }
+      #M2 {
+        margin-left: 158px;
+        margin-top: 3px;
+        transform: rotate(-25deg);
+      }
+      #M3 {
+        margin-left: 115px;
+        margin-top: -125px;
+        transform: rotate(25deg);
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="face"></div>
+    <div id="face"></div>
+    <!-- ****************Eye Left************************* -->
+    <div class="eyeyellow"></div>
+    <div class="eyeblack"></div>
+    <div class="eyewhite"></div>
+    <!-- ****************Eye Right************************* -->
+    <div class="eyeyellow" id="eyeyellow"></div>
+    <div class="eyeblack" id="eyeblack"></div>
+    <div class="eyewhite" id="eyewhite"></div>
+    <!-- ****************** Nose********************* -->
+    <div class="nose"></div>
+    <div id="nose1"></div>
+    <div id="nose2"></div>
+    <div id="nose3"></div>
+    <!-- *****************Body************************ -->
+    <div class="body"></div>
+    <!-- *****************Ear Left************************ -->
+    <div class="ear"></div>
+    <div class="eargray"></div>
+    <!-- *****************Ear Right************************ -->
+    <div class="ear" id="ear"></div>
+    <div class="eargray" id="eargray"></div>
+    <!-- *****************Collar************************ -->
+    <div class="belt"></div>
+    <div class="belt1"></div>
+    <div id="star"></div>
+    <div id="star1"></div>
+    <div id="star2"></div>
+    <!-- *****************mustache************************ -->
+    <div class="M1"></div>
+    <div class="M2"></div>
+    <div class="M3"></div>
+    <!--*********Right************-->
+    <div class="M1" id="M1"></div>
+    <div class="M2" id="M2"></div>
+    <div class="M3" id="M3"></div>
+  </body>
+</html>
